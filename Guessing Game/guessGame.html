@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ch2</title>
+    <title>Guessing Game</title>
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
@@ -10,8 +10,24 @@
 <div id="gameContainer">
 
     <p id="playerInstruction">I'm thinking of a number between 0 and 99</p>
-    <input type="text" name="numberGuess" id="numberGuess" value="Enter your guess...">
-    <input type="button" type="submit" value="Submit Guess" id="submitButton">
+    <form>
+        <input type="text" name="numberGuess" id="numberGuess" value="Enter your guess...">
+        <input type="button" type="submit" value="Submit Guess" id="submitButton">
+    </form>
+
+</div>
+
+<div id="gameStats">
+    <form>
+        <label for="playerWins">Games won: </label>
+        <input type="text" name="playerWins" id="playerWins" value="0 games won so far..." readonly>
+        <br />
+        <label for="guessCount">Guess count: </label>
+        <input type="text" name="guessCount" id="guessCount" value="0 guesses so far..." readonly>
+        <br />
+        <label for="playerAccuracy">Player Accuracy: </label>
+        <input type="text" name="playerAccuracy" id="playerAccuracy" value="0%" readonly>
+    </form>
 
 </div>
 

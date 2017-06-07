@@ -1,6 +1,6 @@
 #gameContainer {
     border: 2px black solid;
-    background-color: lightgray;
+    background-color: burlywood;
     padding: 5px;
     width: 276px;
     /* display: inline-block; would have div width match content length */
@@ -16,5 +16,31 @@
 }
 
 #submitButton {
+    margin: 0px;
+}
+
+#gameStats {
+    margin-top: 10px;
+    border: 2px black solid;
+    background-color: lightblue;
+    padding: 5px;
+    width: 276px;
+}
+
+#gameStats input, label {
+    font-size: 14px;
+    display: inline-block;
+}
+
+#gameStats label {
+    width: 98px;
+}
+
+#gameStats input {
+    margin-bottom: 5px;
+    background-color: lightgray;
+}
+
+#gameStats input:last-child {
     margin: 0px;
 }
