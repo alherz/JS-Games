@@ -20,11 +20,12 @@ function randomNumber() {
     console.log(numberToGuess);
 }
 
-// Function will clear the text from the text field
-function clearTextBoxText() {
+// Function will clear the text from the text field - Not needed thanks to placeholder attribute
+/*function clearTextBoxText() {
     guessTextBox.value = "";
     console.log("clear fired");
 }
+*/
 
 // Checks if player won the game and displays the results
 function didPlayerWin() {
@@ -41,7 +42,6 @@ function didPlayerWin() {
             p.innerHTML = "Congrats, You won! Play again?";
             gamesWon += 1;
             document.getElementById("playerWins").value = gamesWon;
-            document.getElementById("playerAccuracy").value = (100 - guessCount) + "%";
             randomNumber();
         } else {
             if(playerGuess > numberToGuess){
@@ -62,9 +62,8 @@ function didPlayerWin() {
 var numberToGuess;
 var gamesWon = 0;
 var guessCount = 0;
-var playerAccuracy = 0;
 var guessTextBox = document.getElementById("numberGuess");
 var gameSubmitButton = document.getElementById("submitButton");
-guessTextBox.addEventListener("click", clearTextBoxText, false);
+// guessTextBox.addEventListener("click", clearTextBoxText, false); Not needed thanks to placeholder
 gameSubmitButton.addEventListener("click", didPlayerWin, false);
 randomNumber();
